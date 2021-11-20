@@ -17,10 +17,10 @@ passport.use(
   new GoogleAuth.Strategy(
     {
       clientID:
-        '796959289157-ser2d8agd1nv5t1kl64ii4rtqfi7blb7.apps.googleusercontent.com',
-      clientSecret: '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',
+        '633719195159-mae5ouku2d3m4g649p16gfnnms6hfrts.apps.googleusercontent.com',
+      clientSecret: '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',
       callbackURL: '/api/v1/auth/google/callback',
-      proxy: true,
+      proxy: true
     },
     (_accessToken, _refreshToken, profile, done) => {
       User.findOne({ 'accounts.google.id': profile.id }).then(
